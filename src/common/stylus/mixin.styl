@@ -1,0 +1,48 @@
+border-1px($color)
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    border-top: 1px solid $color
+    content: ' '
+bg-image($url)
+  background-image: url($url + '@2x.png')
+  @media (-webkit-min-device-pixel-ratio: 3), (min-decive-pixel-ratio: 3)
+    background-image: url($url + '@3x.png')
+star-img($wh,$mr,$size)
+  width: $wh
+  height: $wh
+  margin-right: $mr
+  background-size: $wh
+  &:last-child
+    margin-right:0
+  &.on
+    bg-image($size+'_on')
+  &.off
+    bg-image($size+'_off')
+  &.half
+    bg-image($size+'_half')
+img-icon($wh,$mr,$size)
+  display: inline-block
+  width: $wh
+  height: $wh
+  margin-right: $mr
+  background-size: $wh
+  background-repeat: no-repeat
+  &.decrease
+    bg-image('decrease_'+$size)
+  &.discount
+    bg-image('discount_'+$size)
+  &.guarantee
+    bg-image('guarantee_'+$size)
+  &.invoice
+    bg-image('invoice_'+$size)
+  &.special
+    bg-image('special_'+$size)
+img-text($lh,$fs)
+  line-height: $lh
+  font-size: $fs
+  vertical-align: top
