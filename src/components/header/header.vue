@@ -193,9 +193,9 @@
       overflow: auto
       background: rgba(7, 17, 27, 0.8)
       backdrop-filter:blur(10px)
-      &.fade-enter-active, .fade-leave-active
+      &.fade-enter-active, &.fade-leave-active
         transition: all .5s ease;
-      &.fade-enter, .fade-leave-to
+      &.fade-enter, &.fade-leave-to
         opacity: 0
         background: rgba(7,17,27,0)
       .detail-wrapper

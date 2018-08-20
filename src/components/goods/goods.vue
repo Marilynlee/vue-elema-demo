@@ -30,7 +30,7 @@
                                                                 class="old">￥{{food.oldPrice}}</span>
                 </div>
                 <div class="cartcontrol-wrapper">
-                  <cartcontrol :food="food" :key="num"></cartcontrol>
+                  <cartcontrol :food="food" :key="num" @cartAdd="cartAdd"></cartcontrol>
                 </div>
               </div>
             </li>
@@ -38,7 +38,7 @@
         </li>
       </ul>
     </div>
-    <shopcart :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice" :selectFoods="selectFoods"></shopcart>
+    <shopcart ref="shopcart" :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice" :selectFoods="selectFoods"></shopcart>
   </div>
 </template>
 
@@ -136,6 +136,13 @@
         let foodList = this.$refs.foods.getElementsByClassName('foodListHook');
         let el = foodList[index];
         this.foodsScroll.scrollToElement(el, 300);
+      },
+      cartAdd(el) {
+        // 父组件使用v-on:event监听子组件的注册事件，并进行处理
+        this.$nextTick(() => {
+          // 调用shopcart组件的drop()函数
+          this.$refs['shopcart'].drop(el);
+        });
       }
     }
   };

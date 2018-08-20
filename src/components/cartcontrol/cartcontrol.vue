@@ -29,6 +29,8 @@
         } else {
           this.food.count++;
         }
+        // 子组件向父组件注册一个事件，并传参
+        this.$emit('cartAdd', event.target);
       },
       deleteCart() {
         if (this.food.count) {
@@ -55,7 +57,7 @@
         transition: all .4s linear
       &.move-enter, &.move-leave-to
         opacity: 0
-        transform: translate3D(24px,0,0)
+        transform: translate3d(24px,0,0)
         .inner
           transform:rotate(180deg)
     .cart-count
