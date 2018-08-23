@@ -220,7 +220,7 @@
       // 在购物车把物品删除完时，需要自动隐藏列表
       totalCount: function(newVal) {
         if (!newVal) {
-          this.fold = !this.fold;
+          this.fold = true;
           this.listShow = this.totalCount;
         }
       }
@@ -399,8 +399,8 @@
     background :rgba(7,17,27,0.6)
     backdrop-filter: blur(10px)
     &.fade-enter-active,&.fade-leave-active
-      transition: all .4s
-    &.fade-enter,&.fold-leave-to
+      transition: all .5s
+    &.fade-enter,&.fade-leave-to
       opacity: 0
       background :rgba(7,17,27,0)
 </style>

@@ -4,8 +4,7 @@
       <ul class="menu-wrapper  border-1px">
         <li v-for="(item, index) in goods" :key="index" class="menu-item" :class="{current:index===curIndex}"
             @click="selectMenu($event,index)">
-          <imgText class=" border-1px"
-                   :pros="{show:item.type>0,size:'12',type:item.type,bg:'bg',text:item.name}"></imgText>
+          <imgText class=" border-1px" :pros="{show:item.type>0,size:'12',type:item.type,bg:'bg',text:item.name}"></imgText>
         </li>
       </ul>
     </div>
@@ -14,7 +13,7 @@
         <li v-for="(item,index) in goods" :key="index" class="food-list foodListHook">
           <h1 class="title">{{item.name}}</h1>
           <ul>
-            <li v-for="(food,num) in item.foods" class="food-item border-1px" :key="num">
+            <li v-for="(food,num) in item.foods" class="food-item border-1px" :key="num" @click="checkFood(food,$event)">
               <div class="icon">
                 <img width="57" height="57" alt="food-img" :src="food.icon">
               </div>
@@ -39,6 +38,7 @@
       </ul>
     </div>
     <shopcart ref="shopcart" :deliveryPrice="seller.deliveryPrice" :minPrice="seller.minPrice" :selectFoods="selectFoods"></shopcart>
+    <food :food="checkedFood" ref="food" @cartAdd="cartAdd"></food>
   </div>
 </template>
 
@@ -47,6 +47,7 @@
   import BScroll from 'better-scroll';
   import shopcart from '@components/shopcart/shopcart.vue';
   import cartcontrol from '@components/cartcontrol/cartcontrol.vue';
+  import food from '@components/food/food.vue';
 
   const ERR_OK = 0;
   export default {
@@ -58,13 +59,15 @@
     components: {
       imgText,
       shopcart,
-      cartcontrol
+      cartcontrol,
+      food
     },
     data() {
       return {
         goods: [],
         listHeight: [],
-        scrollY: 0
+        scrollY: 0,
+        checkedFood: {}
       };
     },
     computed: {
@@ -122,18 +125,21 @@
         });
       },
       _calculateHeight() {
+        // 获取每个分类dom
         let foodList = this.$refs.foods.getElementsByClassName('foodListHook');
         let height = 0;
         this.listHeight.push(height);
         for (let i = 0; i < foodList.length; i++) {
           let item = foodList[i];
           height += item.clientHeight;
+          // 每个分类dom高度放入listHeight数组
           this.listHeight.push(height);
         }
       },
-      selectMenu(e, index) {
-        console.log(index, e);
+      selectMenu(event, index) {
+        console.log(index, event);
         let foodList = this.$refs.foods.getElementsByClassName('foodListHook');
+        // 通过点击左侧栏的index，关联右侧展示的分类
         let el = foodList[index];
         this.foodsScroll.scrollToElement(el, 300);
       },
@@ -143,6 +149,11 @@
           // 调用shopcart组件的drop()函数
           this.$refs['shopcart'].drop(el);
         });
+      },
+      checkFood(food, event) {
+        console.log(food, event);
+        this.checkedFood = food;
+        this.$refs.food.show();
       }
     }
   };
