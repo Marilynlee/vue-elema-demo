@@ -151,7 +151,7 @@
         });
       },
       checkFood(food, event) {
-        console.log(food, event);
+//        console.log(food, event);
         this.checkedFood = food;
         this.$refs.food.show();
       }

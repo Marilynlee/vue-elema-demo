@@ -18,13 +18,24 @@
             <span class="now">￥{{food.price}}</span>
             <span class="old" v-show="food.oldPrice">￥{{food.oldPrice}}</span>
           </div>
+          <div class="cartcontrol-wrapper">
+            <cartcontrol :food="food" @cartAdd="cartAdd"></cartcontrol>
+          </div>
+          <transition name="fade">
+            <div @click.stop.prevent="addFood" class="buy" v-show="!food.count || food.count===0">加入购物车</div>
+          </transition>
         </div>
-        <div class="cartcontrol-wrapper">
-          <cartcontrol :food="food"></cartcontrol>
+        <split  v-show="food.info"></split>
+        <div class="info" v-show="food.info">
+          <h1 class="title">商品介绍</h1>
+          <p class="text">{{food.info}}</p>
         </div>
-        <transition name="fade">
-          <div @click="addFood" class="buy" v-show="!food.count || food.count===0">加入购物车</div>
-        </transition>
+        <split></split>
+        <div class="rating">
+          <h1 class="title">商品评价</h1>
+          <ratingselect :selectType="selectType" :onlyContent="onlyContent"
+          :desc="desc" :ratings="food.ratings"></ratingselect>
+        </div>
       </div>
     </div>
   </transition>
@@ -34,7 +45,12 @@
   import Vue from 'vue';
   import BScroll from 'better-scroll';
   import cartcontrol from '@components/cartcontrol/cartcontrol.vue';
+  import split from '@components/split/split.vue';
+  import ratingselect from '@components/ratingselect/ratingselect.vue';
 
+//  const POSITIVE = 0;
+//  const NEGATIVE = 1;
+  const ALL = 2;
   export default {
     props: {
       food: {
@@ -43,15 +59,26 @@
     },
     data() {
       return {
-        showFlag: false
+        showFlag: false,
+        selectType: ALL,
+        onlyContent: true,
+        desc: {
+          all: '全部',
+          positive: '推荐',
+          negative: '吐槽'
+        }
       };
     },
     components: {
-      cartcontrol
+      cartcontrol,
+      ratingselect,
+      split
     },
     methods: {
       show() {
         this.showFlag = true;
+        this.seclectType = ALL;
+        this.onlyContent = true;
         this.$nextTick(() => {
           if (!this.scroll) {
             this.scroll = new BScroll(this.$refs.foodDetail, {
@@ -68,6 +95,10 @@
       addFood() {
         this.$emit('cartAdd', event.target);
         Vue.set(this.food, 'count', 1);
+      },
+      cartAdd() {
+        // cartcontrol组件内触发cartAdd事件无法直接传至good组件，需要在food组件再传递一次
+        this.$emit('cartAdd', event.target);
       }
     }
   };
@@ -108,6 +139,7 @@
         font-size: 20px
         color:#fff
   .content
+    position: relative;
     padding: 18px
     .title
       line-height: 14px
@@ -136,25 +168,46 @@
         color: rgb(240, 20, 20)
       .old
         text-decoration: line-through
-  .cartcontrol-wrapper
-    position :absolute
-    right: 12px
-    bottom: 12px
-  .buy
-    position :absolute
-    right: 18px
-    bottom: 18px
-    z-index :10
-    height: 24px
-    line-height: 24px
-    padding:0 12px
-    box-sizing:border-box
-    font-size: 10px
-    border-radius: 12px
-    color:#fff
-    background: rgb(0,160,220)
-    &.fade-enter-active, &.fade-leave-active
-      transition: all .2s
-    &.fade-enter, &.fade-leave-to
-      opacity: 0
+    .cartcontrol-wrapper
+      position :absolute
+      right: 12px
+      bottom: 12px
+    .buy
+      position :absolute
+      right: 18px
+      bottom: 18px
+      z-index :10
+      height: 24px
+      line-height: 24px
+      padding:0 12px
+      box-sizing:border-box
+      font-size: 10px
+      border-radius: 12px
+      color:#fff
+      background: rgb(0,160,220)
+      &.fade-enter-active, &.fade-leave-active
+        transition: all .2s
+      &.fade-enter, &.fade-leave-to
+        opacity: 0
+  .info
+    padding: 18px
+    .title
+      line-height: 14px
+      margin-bottom: 6px
+      font-size: 14px
+      font-weight: 700
+      color:rgb(7,17,27)
+    .text
+      line-height: 24px
+      padding: 0 8px
+      font-size: 12px
+      color:rgb(77,85,93)
+  .rating
+    padding-top: 18px
+    .title
+      line-height: 14px
+      margin-left: 18px
+      font-size: 14px
+      font-weight: 700
+      color:rgb(7,17,27)
 </style>
