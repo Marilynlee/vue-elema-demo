@@ -33,8 +33,7 @@
         <split></split>
         <div class="rating">
           <h1 class="title">商品评价</h1>
-          <ratingselect :selectType="selectType" :onlyContent="onlyContent"
-          :desc="desc" :ratings="food.ratings"></ratingselect>
+          <ratingselect :properties="{selectType:selectType,onlyContent:onlyContent,desc:desc}" :ratings="food.ratings"></ratingselect>
         </div>
       </div>
     </div>
@@ -61,7 +60,7 @@
       return {
         showFlag: false,
         selectType: ALL,
-        onlyContent: true,
+        onlyContent: false,
         desc: {
           all: '全部',
           positive: '推荐',
