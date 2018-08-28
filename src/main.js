@@ -5,8 +5,15 @@ import App from './App';
 import router from './router';
 import resource from './resource';
 import '@/common/stylus/index.styl';
+import { formatDate } from './common/js/date';
 
 Vue.config.productionTip = false;
+
+Vue.filter('formatDate', function (value) {
+  if (!value) return '';
+  value = new Date(value);
+  return formatDate(value, 'yyyy-MM-dd hh:mm');
+});
 
 /* eslint-disable no-new */
 new Vue({

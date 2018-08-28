@@ -33,22 +33,23 @@
         <split></split>
         <div class="rating">
           <h1 class="title">商品评价</h1>
-          <ratingselect :properties="{selectType:selectType,onlyContent:onlyContent,desc:desc}" :ratings="food.ratings"></ratingselect>
+          <ratingselect :properties="{selectType:selectType,onlyContent:onlyContent,desc:desc}" :ratings="food.ratings"
+          @ratingType="ratingType" @onlyContType="onlyContType"></ratingselect>
           <div class="rating-wrapper">
             <ul v-if="food.ratings && food.ratings.length">
-              <li v-for="(rating,index) in food.ratings" :key="index" class="rating-item">
+              <li v-for="(rating,index) in food.ratings" :key="index" v-show="needShow(rating)" class="rating-item">
                 <div class="user">
                   <span class="name">{{rating.username}}</span>
                   <img class="avatar" width="12" height="12" :src="rating.avatar"/>
                 </div>
-                <div class="time">{{rating.rateTime}}</div>
+                <div class="time">{{rating.rateTime | formatDate}}</div>
                 <p class="text">
                   <span :class="{'icon-thumb_up':rating.rateType===0,'icon-thumb_down':rating.rateType===1}"></span>
                   {{rating.text}}
                 </p>
               </li>
             </ul>
-            <div v-else class="no-rating"></div>
+            <div v-else class="no-rating">暂无评价</div>
           </div>
         </div>
       </div>
@@ -63,8 +64,9 @@
   import split from '@components/split/split.vue';
   import ratingselect from '@components/ratingselect/ratingselect.vue';
 
-//  const POSITIVE = 0;
-//  const NEGATIVE = 1;
+  /* eslint-disable no-unused-vars */
+  const POSITIVE = 0;
+  const NEGATIVE = 1;
   const ALL = 2;
   export default {
     props: {
@@ -93,7 +95,7 @@
       show() {
         this.showFlag = true;
         this.seclectType = ALL;
-        this.onlyContent = true;
+        this.onlyContent = false;
         this.$nextTick(() => {
           if (!this.scroll) {
             this.scroll = new BScroll(this.$refs.foodDetail, {
@@ -114,6 +116,24 @@
       cartAdd() {
         // cartcontrol组件内触发cartAdd事件无法直接传至good组件，需要在food组件再传递一次
         this.$emit('cartAdd', event.target);
+      },
+      ratingType(type) {
+//        console.log(type);
+        this.selectType = type;
+      },
+      onlyContType(type) {
+//        console.log(type);
+        this.onlyContent = type;
+      },
+      needShow(item) {
+        if (!item.text && this.onlyContent) {
+          return false;
+        }
+        if (this.selectType === ALL) {
+          return true;
+        } else {
+          return item.rateType === this.selectType;
+        }
       }
     }
   };
@@ -262,4 +282,8 @@
             color:rgb(0,160,220)
           .icon-thumb_down
             color:rgb(147,153,159)
+      .no-rating
+        padding: 16px 0
+        font-size: 12px
+        color:rgb(147,153,159)
 </style>
