@@ -63,8 +63,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import star from '../../components/star/star.vue';
-  import imgText from '../../components/imgText/imgText.vue';
+  import star from '@components/star/star.vue';
+  import imgText from '@components/imgText/imgText.vue';
   export default {
     props: {
       seller: {
