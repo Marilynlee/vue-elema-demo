@@ -16,13 +16,13 @@ const express = require('express')
 // 创建node.js的express开发框架的实例
 const app = express()
 // 引用的json地址
-var appData = require('../data.json')
+let appData = require('../data.json')
 // json某一个key
-var seller = appData.seller
-var goods = appData.goods
-var ratings = appData.ratings
+let seller = appData.seller
+let goods = appData.goods
+let ratings = appData.ratings
 
-var apiRoutes = express.Router()
+let apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
 const HOST = process.env.HOST

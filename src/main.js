@@ -4,7 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import resource from './resource';
-import '@/common/stylus/index.styl';
+import './common/stylus/index.styl';
 import { formatDate } from './common/js/date';
 
 Vue.config.productionTip = false;

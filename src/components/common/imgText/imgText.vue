@@ -23,7 +23,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
-@import "../../common/stylus/mixin.styl";
+@import "~@stylus/mixin.styl";
 
 .img-text
   &.img-12-nobg

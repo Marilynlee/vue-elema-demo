@@ -60,9 +60,9 @@
 <script type="text/ecmascript-6">
   import Vue from 'vue';
   import BScroll from 'better-scroll';
-  import cartcontrol from '@components/cartcontrol/cartcontrol.vue';
-  import split from '@components/split/split.vue';
-  import ratingselect from '@components/ratingselect/ratingselect.vue';
+  import cartcontrol from '@components/common/cartcontrol/cartcontrol.vue';
+  import split from '@components/common/split/split.vue';
+  import ratingselect from '@components/common/ratingselect/ratingselect.vue';
 
   /* eslint-disable no-unused-vars */
   const POSITIVE = 0;
@@ -140,7 +140,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
-  @import "../../common/stylus/mixin.styl";
+  @import "~@stylus/mixin.styl";
 .food
   position :fixed
   left:0

@@ -55,9 +55,9 @@
 
 <script type="text/ecmascript-6">
   import BScroll from 'better-scroll';
-  import star from '@components/star/star.vue';
-  import split from '@components/split/split.vue';
-  import ratingselect from '@components/ratingselect/ratingselect.vue';
+  import star from '@components/common/star/star.vue';
+  import split from '@components/common/split/split.vue';
+  import ratingselect from '@components/common/ratingselect/ratingselect.vue';
 
   /* eslint-disable no-unused-vars */
   const POSITIVE = 0;
@@ -130,7 +130,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
-  @import "../../common/stylus/mixin.styl";
+  @import "~@stylus/mixin.styl";
 .ratings
   position :absolute
   top: 174px

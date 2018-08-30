@@ -63,8 +63,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import star from '@components/star/star.vue';
-  import imgText from '@components/imgText/imgText.vue';
+  import star from '@components/common/star/star.vue';
+  import imgText from '@components/common/imgText/imgText.vue';
   export default {
     props: {
       seller: {
@@ -92,7 +92,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
-  @import "../../common/stylus/mixin"
+  @import "~@stylus/mixin"
 
   .header
     position: relative

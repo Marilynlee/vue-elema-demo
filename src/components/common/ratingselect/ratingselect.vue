@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
-  @import "../../common/stylus/mixin.styl";
+  @import "~@stylus/mixin.styl";
 .ratingselect
   .rating-type
     padding: 18px 0

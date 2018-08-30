@@ -43,11 +43,11 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import imgText from '@components/imgText/imgText.vue';
+  import imgText from '@components/common/imgText/imgText.vue';
   import BScroll from 'better-scroll';
-  import shopcart from '@components/shopcart/shopcart.vue';
-  import cartcontrol from '@components/cartcontrol/cartcontrol.vue';
-  import food from '@components/food/food.vue';
+  import shopcart from '@components/goodspart/shopcart/shopcart.vue';
+  import cartcontrol from '@components/common/cartcontrol/cartcontrol.vue';
+  import food from '@components/goodspart/food/food.vue';
 
   const ERR_OK = 0;
   export default {
@@ -160,7 +160,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
-  @import "../../common/stylus/mixin.styl";
+  @import "~@stylus/mixin.styl";
   .goods
     display: flex
     position: absolute

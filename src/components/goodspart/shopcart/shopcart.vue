@@ -60,7 +60,7 @@
 
 <script type="text/ecmascript-6">
   import BScroll from 'better-scroll';
-  import cartcontrol from '@components/cartcontrol/cartcontrol.vue';
+  import cartcontrol from '@components/common/cartcontrol/cartcontrol.vue';
   export default {
     props: {
       selectFoods: {
@@ -229,7 +229,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
-  @import "../../common/stylus/mixin"
+  @import "~@stylus/mixin.styl";
   @keyframes slide-move {
     from {
       transform: translate3d(0, 0%, 0)

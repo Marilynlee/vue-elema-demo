@@ -44,7 +44,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
-@import "../../common/stylus/mixin.styl";
+@import "~@stylus/mixin.styl";
 
 .star
   font-size: 0
