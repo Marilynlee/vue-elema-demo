@@ -24,8 +24,13 @@ export default new Router({
       component: ratings
     },
     {
-      path: '/seller',
+      path: '/seller/:id',
       name: 'seller',
+      props: true,
+      component: seller
+    },
+    {
+      path: '/seller',
       component: seller
     }
   ]

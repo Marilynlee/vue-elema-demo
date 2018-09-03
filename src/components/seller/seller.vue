@@ -68,6 +68,7 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import { saveToLocal, loadFromLocal } from '../../common/js/store';
   import BScroll from 'better-scroll';
   import star from '@components/common/star/star.vue';
   import split from '@components/common/split/split.vue';
@@ -82,6 +83,9 @@
     props: {
       seller: {
         type: Object
+      },
+      id: {
+        type: String
       }
     },
     components: {
@@ -91,7 +95,7 @@
     },
     data() {
       return {
-        favorite: false
+        favorite: loadFromLocal(this.id, 'favorite', false)
       };
     },
     computed: {
@@ -103,7 +107,7 @@
       console.log(this, 0);
     }, */
     created() {
-      console.log(this, 1);
+      console.log(this.id, 1);
       this.$nextTick(() => {
         console.log(this.seller, 2);
         this.scroll = new BScroll(this.$refs.seller, {
@@ -134,6 +138,7 @@
       },
       toggleFavorite() {
         this.favorite = !this.favorite;
+        saveToLocal(this.id, 'favorite', this.favorite);
       }
     },
     /* beforeMount() {
