@@ -41,3 +41,36 @@ npm run build --report
 
 ## 项目预览
 查看[demo](https://m.limuyi.com.cn)
+
+## 项目发布
+1. 采用vue-cli 自动构建的vue项目，如果静态文件不是部署在网站根目录下，需要修改项目配置为相对路径，主要需要做两步。
+  - 修改config => index.js => build => assetsPublicPath 中的'/'成为'./'
+  - 在build => util.js 里找到ExtractTextPlugin.extract增加一行：publicPath: '../../'
+2. 采用vue-cli 自动构建的vue项目，选择了router,打开的默认地址后有/#，可以实例化Router时：设置mode属性为：history
+```
+new Router({
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      name: 'xx',
+      component: xx
+    }
+  ]
+})
+```
+3. 发布时去掉项目中的日志和断点，在build/webpack.prod.conf.js中UglifyJsPlugin插件下配置
+```
+new UglifyJsPlugin({
+      uglifyOptions: {
+        compress: {
+          warnings: false,
+          drop_debugger: true,     //去掉断点
+          drop_console: true       //去掉日志
+        }
+      },
+      sourceMap: config.build.productionSourceMap,
+      parallel: true
+    }),
+```
+4. 由于本项目采用的是本地mock数据，所以npm run build之前需要将请求接口均修改为线上接口
