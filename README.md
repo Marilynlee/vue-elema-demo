@@ -38,3 +38,6 @@ npm run build --report
 6. vue2.x版本中子组件不可改变props属性，计算属性可以设置set、get方法
 7. stylus中import使用alias路径，需要在路径前面加~
 8. 还有一些坑，项目过程中忘记了，反正是一路踩过来，改过来！
+
+## 项目预览
+查看[demo](!https://m.limuyi.com.cn)
