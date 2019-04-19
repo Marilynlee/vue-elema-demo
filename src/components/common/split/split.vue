@@ -7,6 +7,7 @@ export default {};
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
+@import "~@stylus/mixin.styl";
 .split
   height: px2rem(16px)
   width: 100%

@@ -42,6 +42,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
+@import "~@stylus/mixin.styl";
   .cartcontrol-wrapper
     font-size: 0
     .cart-decrease

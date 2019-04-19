@@ -245,7 +245,9 @@
         &.active
           color:rgb(240,20,20)
       .text
-        line-height: px2rem(10px)
+        position: absolute
+        top: px2rem(28px)
+        right: px2rem(14px)
         font-size: px2rem(10px)
         color:rgb(77,85,93)
   .bulletin
