@@ -182,37 +182,37 @@
   @import "~@stylus/mixin.styl";
 .seller
   position :absolute
-  top: 174px
+  top: px2rem(174px)
   bottom: 0
   left: 0
   width: 100%
   overflow :hidden
   .overview
     position: relative
-    padding: 18px 18px 0 18px
+    padding: px2rem(18px) px2rem(18px) 0 px2rem(18px)
     .title
-      margin-bottom: 8px
-      line-height: 18px
-      font-size: 14px
+      margin-bottom: px2rem(8px)
+      line-height: px2rem(18px)
+      font-size: px2rem(14px)
       color:rgb(7,17,27)
     .desc
-      padding-bottom: 18px
+      padding-bottom: px2rem(18px)
       border-1px(rgba(7,17,27,0.1))
       font-size: 0
       .star
         display: inline-block
-        margin-right: 8px
+        margin-right: px2rem(8px)
         vertical-align: top
       .text
         display: inline-block
-        margin-right: 12px
-        line-height: 18px
+        margin-right: px2rem(12px)
+        line-height: px2rem(18px)
         vertical-align: top
-        font-size: 10px
+        font-size: px2rem(10px)
         color:rgb(77,85,93)
     .remark
       display: flex
-      margin: 18px
+      margin: px2rem(18px)
       .block
         flex:1
         text-align: center
@@ -220,61 +220,61 @@
         &:last-child
           border:none
         h2
-          margin-bottom: 4px
-          font-size: 10px
-          line-height: 10px
+          margin-bottom: px2rem(4px)
+          font-size: px2rem(10px)
+          line-height: px2rem(10px)
           color:rgb(147,153,159)
         .content
-          line-height: 24px
-          font-size: 10px
+          line-height: px2rem(24px)
+          font-size: px2rem(10px)
           color:rgb(7,17,27)
           .stress
-            font-size:24px
+            font-size:px2rem(24px)
     .favorite
       position: absolute
-      width: 48px
-      top: 18px
-      right: 13px
+      width: px2rem(48px)
+      top: px2rem(18px)
+      right: px2rem(13px)
       text-align: center
       .icon
         display: block
-        margin-bottom: 4px
-        line-height: 24px
-        font-size: 24px
+        margin-bottom: px2rem(4px)
+        line-height: px2rem(24px)
+        font-size: px2rem(24px)
         color:#d4d6d9
         &.active
           color:rgb(240,20,20)
       .text
-        line-height: 10px
-        font-size: 10px
+        line-height: px2rem(10px)
+        font-size: px2rem(10px)
         color:rgb(77,85,93)
   .bulletin
-    padding:18px 18px 0 18px
+    padding:px2rem(18px) px2rem(18px) 0 px2rem(18px)
     .title
-      margin-bottom: 8px
-      line-height: 18px
-      font-size: 14px
+      margin-bottom: px2rem(8px)
+      line-height: px2rem(18px)
+      font-size: px2rem(14px)
       color:rgb(7,17,27)
     .content-wrapper
-      padding:0 12px 16px 12px
+      padding:0 px2rem(12px) px2rem(16px) px2rem(12px)
       border-1px(rgba(7,17,27,0.1))
       .content
-        line-height: 24px
-        font-size: 12px
+        line-height: px2rem(24px)
+        font-size: px2rem(12px)
         color:rgb(240,20,20)
     .support
       .support-item
-        padding: 16px 12px
+        padding: px2rem(16px) px2rem(12px)
         font-size: 0
         border-1px(rgba(7,17,27,0.1))
         &:last-child
           border:none
   .seller-pics
-    padding: 18px
+    padding: px2rem(18px)
     .title
-      margin-bottom: 12px
-      line-height: 14px
-      font-size: 14px
+      margin-bottom: px2rem(12px)
+      line-height: px2rem(14px)
+      font-size: px2rem(14px)
       color:rgb(7,17,27)
     .pics-wrapper
       width: 100%
@@ -284,22 +284,22 @@
         font-size: 0
         .pic-item
           display: inline-block
-          margin-right: 6px
-          width: 120px
-          height: 90px
+          margin-right: px2rem(6px)
+          width: px2rem(120px)
+          height: px2rem(90px)
   .info
-    padding: 18px 18px 0 18px
+    padding: px2rem(18px) px2rem(18px) 0 px2rem(18px)
     color:rgb(7,17,27)
     .title
-      padding-bottom: 12px
-      line-height: 14px
+      padding-bottom: px2rem(12px)
+      line-height: px2rem(14px)
       border-1px(rgba(7,17,27,0.1))
-      font-size: 14px
+      font-size: px2rem(14px)
     .info-item
-      padding: 16px 12px
-      line-height: 16px
+      padding: px2rem(16px) px2rem(12px)
+      line-height: px2rem(16px)
       border-1px(rgba(7,17,27,0.1))
-      font-size: 12px
+      font-size: px2rem(12px)
       &:last-child
         border:none
 </style>

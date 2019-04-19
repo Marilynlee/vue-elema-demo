@@ -28,22 +28,22 @@
 .img-text
   &.img-12-nobg
     .icon
-      img-icon(12px, 4px, '1')
+      img-icon(px2rem(12px), px2rem(4px), '1')
     .text
-      img-text(14px, 10px)
+      img-text(px2rem(14px), px2rem(10px))
   &.img-12-bg
     .icon
-      img-icon(12px, 2px, '3')
+      img-icon(px2rem(12px), px2rem(2px), '3')
     .text
-      img-text(12px, 12px)
+      img-text(px2rem(12px), px2rem(12px))
   &.img-16-nobg
     .icon
-      img-icon(16px, 6px, '2')
+      img-icon(px2rem(16px), px2rem(6px), '2')
     .text
-      img-text(16px, 12px)
+      img-text(px2rem(16px), px2rem(12px))
   &.img-16-bg
     .icon
-      img-icon(16px, 6px, '4')
+      img-icon(px2rem(16px), px2rem(6px), '4')
     .text
-      img-text(16px, 12px)
+      img-text(px2rem(16px), px2rem(12px))
 </style>

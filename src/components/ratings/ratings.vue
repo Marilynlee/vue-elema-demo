@@ -133,123 +133,123 @@
   @import "~@stylus/mixin.styl";
 .ratings
   position :absolute
-  top: 174px
+  top: px2rem(174px)
   bottom: 0
   left: 0
   width: 100%
   overflow :hidden
   .overview
     display :flex
-    padding: 18px 0
+    padding: px2rem(18px) 0
     .overview-left
-      flex:0 0 137px
-      width: 137px
-      padding: 6px 0
+      flex:0 0 px2rem(137px)
+      width: px2rem(137px)
+      padding: px2rem(6px) 0
       border-right:1px solid rgba(7,17,27,0.1)
       text-align: center
       @media only screen and (max-width:320px)
-        flex:0 0 120px
-        width: 120px
+        flex:0 0 px2rem(120px)
+        width: px2rem(120px)
       .score
-        margin-bottom: 6px
-        line-height: 28px
-        font-size: 24px
+        margin-bottom: px2rem(6px)
+        line-height: px2rem(28px)
+        font-size: px2rem(24px)
         color:rgb(255,153,0)
       .title
-        margin-bottom: 8px
-        line-height: 12px
-        font-size: 12px
+        margin-bottom: px2rem(8px)
+        line-height: px2rem(12px)
+        font-size: px2rem(12px)
         color:rgb(7,17,27)
       .rank
-        line-height: 10px
-        font-size: 10px
+        line-height: px2rem(10px)
+        font-size: px2rem(10px)
         color:rgb(147,153,159)
     .overview-right
       flex:1
-      padding:6px 0 6px 24px
+      padding:6px 0 px2rem(6px) px2rem(24px)
       @media only screen and (max-width:320px)
-        padding-left: 12px
+        padding-left: px2rem(12px)
       .score-wrapper
-        margin-bottom: 8px
+        margin-bottom: px2rem(8px)
         font-size: 0
         .title
           display :inline-block
-          line-height: 18px
+          line-height: px2rem(18px)
           color:rgb(7,17,27)
-          font-size: 12px
+          font-size: px2rem(12px)
         .star
           display :inline-block
-          margin:0 12px
+          margin:0 px2rem(12px)
           vertical-align :top
           @media only screen and (max-width:320px)
-            margin:0 6px
+            margin:0 px2rem(6px)
         .score
           display :inline-block
-          line-height: 18px
+          line-height: px2rem(18px)
           vertical-align :top
-          font-size: 12px
+          font-size: px2rem(12px)
           color:rgb(255,153,0)
       .delivery-wrapper
         font-size: 0
         .title
-          line-height: 18px
+          line-height: px2rem(18px)
           color:rgb(7,17,27)
-          font-size: 12px
+          font-size: px2rem(12px)
         .delivery-time
-          margin-left: 12px
+          margin-left: px2rem(12px)
           color:rgb(147,153,159)
-          font-size: 12px
+          font-size: px2rem(12px)
           @media only screen and (max-width:320px)
-            margin-left: 6px
+            margin-left: px2rem(6px)
   .ratings-wrapper
-    padding: 0 18px
+    padding: 0 px2rem(18px)
     .rating-item
       display: flex
-      padding: 18px 0
+      padding: px2rem(18px) 0
       border-1px(rgba(7,17,27,0.1))
       .avatar
-        flex: 0 0 28px
-        width: 28px
-        margin-right: 12px
+        flex: 0 0 px2rem(28px)
+        width: px2rem(28px)
+        margin-right: px2rem(12px)
         img
           border-radius:50%
       .content
         position: relative
         flex:1
         .name
-          margin-bottom: 4px
-          line-height: 12px
-          font-size: 10px
+          margin-bottom: px2rem(4px)
+          line-height: px2rem(12px)
+          font-size: px2rem(10px)
           color:rgb(7,17,27)
         .star-wrapper
-          margin-bottom: 6px
+          margin-bottom: px2rem(6px)
           font-size: 0
           .star
-            margin-right: 6px
+            margin-right: px2rem(6px)
             display: inline-block
             vertical-align: top
           .delivery
             display: inline-block
             vertical-align: top
-            font-size: 10px
-            line-height: 12px
+            font-size: px2rem(10px)
+            line-height: px2rem(12px)
             color:rgb(147,153,159)
         .text
-          margin-bottom: 8px
-          line-height: 18px
-          font-size: 12px
+          margin-bottom: px2rem(8px)
+          line-height: px2rem(18px)
+          font-size: px2rem(12px)
           color:rgb(7,17,27)
         .recommend
-          line-height: 16px
+          line-height: px2rem(16px)
           font-size: 0
           .icon, .item
             display: inline-block
-            margin: 0 8px 4px 0
-            font-size: 9px
+            margin: 0 px2rem(8px) px2rem(4px) 0
+            font-size: px2rem(9px)
           .icon
             color: rgb(0, 160, 220)
           .item
-            padding: 0 6px
+            padding: 0 px2rem(6px)
             border: 1px solid rgba(7, 17, 27, 0.1)
             border-radius: 1px
             color: rgb(147, 153, 159)
@@ -258,7 +258,7 @@
           position: absolute
           top: 0
           right: 0
-          line-height: 12px
-          font-size: 10px
+          line-height: px2rem(12px)
+          font-size: px2rem(10px)
           color: rgb(147, 153, 159)
 </style>

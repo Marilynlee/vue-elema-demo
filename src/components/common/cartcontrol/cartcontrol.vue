@@ -46,33 +46,33 @@
     font-size: 0
     .cart-decrease
       display :inline-block
-      padding: 6px
+      padding: px2rem(6px)
       .inner
         display :inline-block
-        font-size: 24px
-        line-height: 24px
+        font-size: px2rem(24px)
+        line-height: px2rem(24px)
         color:rgb(0,160,220)
         transition: all .4s linear
       &.move-enter-active,&.move-leave-active
         transition: all .4s linear
       &.move-enter, &.move-leave-to
         opacity: 0
-        transform: translate3d(24px,0,0)
+        transform: translate3d(px2rem(24px),0,0)
         .inner
           transform:rotate(180deg)
     .cart-count
       display :inline-block
-      line-height: 24px
-      width: 15px
-      padding: 6px 0 0 0
-      font-size: 10px
+      line-height: px2rem(24px)
+      width: px2rem(15px)
+      padding: px2rem(6px) 0 0 0
+      font-size: px2rem(10px)
       vertical-align :top
       color:rgb(147,153,159)
       text-align :center
     .cart-add
       display :inline-block
-      padding: 6px
-      font-size: 24px
-      line-height: 24px
+      padding: px2rem(6px)
+      font-size: px2rem(24px)
+      line-height: px2rem(24px)
       color:rgb(0,160,220)
 </style>

@@ -74,17 +74,17 @@ export default {
   @import "~@stylus/mixin.styl";
 .ratingselect
   .rating-type
-    padding: 18px 0
-    margin: 0 18px
+    padding: px2rem(18px) 0
+    margin: 0 px2rem(18px)
     font-size: 0
     border-1px(rgba(7,17,27,0.1))
     .block
       display :inline-block
-      padding: 8px 12px
-      border-radius: 2px
-      margin-right: 8px
-      line-height: 16px
-      font-size: 12px
+      padding: px2rem(8px) px2rem(12px)
+      border-radius: px2rem(2px)
+      margin-right: px2rem(8px)
+      line-height: px2rem(16px)
+      font-size: px2rem(12px)
       color: rgb(77,85,93)
       &.active
         color: #fff
@@ -101,8 +101,8 @@ export default {
           background: rgb(77,85,93)
 
   .switch
-    padding: 12px 18px
-    line-height: 24px
+    padding: px2rem(12px) px2rem(18px)
+    line-height: px2rem(24px)
     border-bottom:1px solid rgba(7,17,27,0.1);
     color :rgb(147,153,159)
     font-size: 0
@@ -110,10 +110,10 @@ export default {
       .icon
         color:#00c850
     .icon
-      margin-right: 4px
-      font-size: 24px
+      margin-right: px2rem(4px)
+      font-size: px2rem(24px)
     .text
       display: inline-block
       vertical-align: top
-      font-size: 12px
+      font-size: px2rem(12px)
 </style>

@@ -8,7 +8,7 @@ export default {};
 
 <style lang="stylus" rel="stylesheet/stylus" type="text/stylus">
 .split
-  height: 16px
+  height: px2rem(16px)
   width: 100%
   border-top:1px solid rgba(7,17,27,0.1)
   border-bottom:1px solid rgba(7,17,27,0.1)

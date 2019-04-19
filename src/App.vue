@@ -52,8 +52,8 @@
     .tab
       display: flex
       width: 100%
-      height: 40px
-      line-height: 40px
+      height: px2rem(40px)
+      line-height: px2rem(40px)
       //border-bottom: solid 1px rgba(7, 17, 27, 0.1)
       border-1px(rgba(7, 17, 27, 0.1))
       .tab-item
@@ -61,7 +61,7 @@
         text-align: center
         & > a
           display: block
-          font-size: 14px
+          font-size: px2rem(14px)
           color: rgb(77, 85, 93)
           &.router-link-active
             color:rgb(240, 20, 20)

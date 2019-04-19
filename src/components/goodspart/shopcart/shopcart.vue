@@ -244,7 +244,7 @@
     left: 0
     z-index: 50
     width: 100%
-    height: 48px
+    height: px2rem(48px)
     .content
       display: flex
       background: #141d27
@@ -256,11 +256,11 @@
           display: inline-block
           vertical-align: top
           position: relative
-          top: -10px
-          margin: 0 12px
-          padding: 6px
-          width: 56px
-          height: 56px
+          top: px2rem(-10px)
+          margin: 0 px2rem(12px)
+          padding: px2rem(6px)
+          width: px2rem(56px)
+          height: px2rem(56px)
           box-sizing: border-box
           border-radius: 50%
           background: #141d27
@@ -273,8 +273,8 @@
             &.highlight
               background: rgb(0, 160, 220)
             .icon
-              font-size: 24px
-              line-height: 44px
+              font-size: px2rem(24px)
+              line-height: px2rem(44px)
               color: #80858A
               &.highlight
                 color: #fff
@@ -282,43 +282,43 @@
             position: absolute
             top: 0
             right: 0
-            width: 24px
-            height: 16px
-            line-height: 16px
+            width: px2rem(24px)
+            height: px2rem(16px)
+            line-height: px2rem(16px)
             text-align: center
-            border-radius: 16px
-            font-size: 9px
+            border-radius: px2rem(16px)
+            font-size: px2rem(9px)
             font-weight: 700
             color: rgb(255, 255, 255)
             background: rgb(240, 20, 20)
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4)
+            box-shadow: 0 px2rem(4px) px2rem(8px) 0 rgba(0, 0, 0, 0.4)
         .price
           display: inline-block
           vertical-align: top
-          margin-top: 12px
-          line-height: 24px
-          padding-right: 12px
+          margin-top: px2rem(12px)
+          line-height: px2rem(24px)
+          padding-right: px2rem(12px)
           box-sizing: border-box
           border-right: 1px solid rgba(255, 255, 255, 0.1)
-          font-size: 16px
+          font-size: px2rem(16px)
           font-weight: 700
           &.highlight
             color: #fff
         .desc
           display: inline-block
           vertical-align: top
-          line-height: 24px
-          margin-top: 12px
-          margin-left: 12px
-          font-size: 10px
+          line-height: px2rem(24px)
+          margin-top: px2rem(12px)
+          margin-left: px2rem(12px)
+          font-size: px2rem(10px)
       .content-right
-        flex: 0 0 105px
-        width: 105px
+        flex: 0 0 px2rem(105px)
+        width: px2rem(105px)
         .pay
-          height: 48px
-          line-height: 48px
+          height: px2rem(48px)
+          line-height: px2rem(48px)
           text-align: center
-          font-size: 12px
+          font-size: px2rem(12px)
           font-weight: 700
           background: #2B333B
           &.highlight
@@ -327,12 +327,12 @@
     .ball-container
       .ball
         position: fixed
-        left: 32px
-        bottom: 22px
+        left: px2rem(32px)
+        bottom: px2rem(22px)
         z-index: 200
         .inner
-          width: 16px
-          height: 16px
+          width: px2rem(16px)
+          height: px2rem(16px)
           border-radius: 50%
           background: rgb(0, 160, 220)
           transition: all .4s linear
@@ -350,44 +350,44 @@
       &.fold-leave-active
         animation: slide-move .5s reverse
       .list-header
-        height: 40px
-        line-height: 40px
-        padding: 0 18px
+        height: px2rem(40px)
+        line-height: px2rem(40px)
+        padding: 0 px2rem(18px)
         background: #f3f5f7
         border-bottom: 1px solid rgba(7, 17, 27, 0.1)
         .title
           float: left
-          font-size: 14px
+          font-size: px2rem(14px)
           color: rgb(7, 17, 27)
         .empty
           float: right
-          font-size: 12px
+          font-size: px2rem(12px)
           color: rgb(0, 160, 220)
       .list-content
-        padding: 0 18px
-        max-height: 217px
+        padding: 0 px2rem(18px)
+        max-height: px2rem(217px)
         background: #fff
         overflow: hidden
         .food
           position: relative;
-          padding: 12px 0
+          padding: px2rem(12px) 0
           box-sizing: border-box
           border-1px(rgba(7, 17, 27, 0.1))
           .name
-            line-height: 24px
-            font-size: 14px
+            line-height: px2rem(24px)
+            font-size: px2rem(14px)
             color: rgb(7, 17, 27)
           .price
             position: absolute
-            right: 90px
-            bottom: 12px
-            line-height: 24px
-            font-size: 14px
+            right: px2rem(90px)
+            bottom: px2rem(12px)
+            line-height: px2rem(24px)
+            font-size: px2rem(14px)
             font-weight: 700
             color: rgb(240, 20, 20)
           .cartcontrol-wrapper
             position: absolute
-            bottom: 6px
+            bottom: px2rem(6px)
             right: 0
   .list-mask
     position :fixed

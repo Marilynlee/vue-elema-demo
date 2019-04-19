@@ -2,7 +2,7 @@
   <div class="header">
     <div class="content-wrap">
       <div class="avatar">
-        <img :src="seller.avatar" alt="" width="64" height="64"/>
+        <img :src="seller.avatar" alt="avatar"/>
       </div>
       <div class="content">
         <div class="title">
@@ -22,8 +22,9 @@
       </div>
     </div>
     <div class="bulletin-wrap" @click="showDetail">
-      <span class="bulletin-title"></span><span class="bulletin-text">{{seller.bulletin}}</span><i
-      class="icon-keyboard_arrow_right"></i>
+      <span class="bulletin-title"></span>
+      <span class="bulletin-text">{{seller.bulletin}}</span>
+      <i class="icon-keyboard_arrow_right"></i>
     </div>
     <div class="background">
       <img :src="seller.avatar" alt="bg" width="100%" height="100%">
@@ -101,77 +102,84 @@
     overflow: hidden
     .content-wrap
       position: relative
-      padding: 24px 12px 18px 24px
+      padding: px2rem(24px) px2rem(12px) px2rem(18px) px2rem(24px)
       font-size: 0
       .avatar
         display: inline-block
         vertical-align: top
         img
-          border-radius: 2px
+          width: px2rem(64px)
+          height :px2rem(64px)
+          border-radius: px2rem(2px)
       .content
         display: inline-block
-        margin-left: 16px
+        margin-left: px2rem(16px)
         .title
-          margin: 2px 0 8px 0
+          margin: px2rem(2px) 0 px2rem(8px) 0
           .brand
             display: inline-block
-            width: 30px
-            height: 18px
+            width: px2rem(30px)
+            height: px2rem(18px)
             bg-image('brand')
-            background-size: 30px 18px
+            background-size: px2rem(30px) px2rem(18px)
             background-repeat: no-repeat
           .name
-            margin-left: 6px
-            font-size: 16px
-            line-height: 18px
+            margin-left: px2rem(6px)
+            font-size: px2rem(16px)
+            line-height: px2rem(18px)
             font-weight: bold
             vertical-align: top
         .description
-          margin-bottom: 10px
-          line-height: 12px
-          font-size: 12px
+          margin-bottom: px2rem(10px)
+          line-height: px2rem(12px)
+          font-size: px2rem(12px)
       .support-count
         position: absolute
-        right: 12px
-        bottom: 14px
-        padding: 08px
-        height: 16px
-        line-height: 16px
-        border-radius: 14px
+        right: px2rem(12px)
+        bottom: px2rem(14px)
+        padding: px2rem(8px)
+        height: px2rem(16px)
+        line-height: px2rem(16px)
+        border-radius: px2rem(14px)
         background-color: rgba(0, 0, 0, 0.2)
         text-align: center
         .count
-          font-size: 10px
+          font-size: px2rem(10px)
           vertical-align: top
         .icon-keyboard_arrow_right
-          margin-left: 2px
-          font-size: 10px
-          line-height: 16px
+          margin-left: px2rem(2px)
+          font-size: px2rem(10px)
+          line-height: px2rem(16px)
     .bulletin-wrap
       position: relative
-      height: 28px
-      padding: 0 22px 0 12px
-      line-height: 28px
+      height: px2rem(28px)
+      padding: 0 px2rem(22px) 0 px2rem(12px)
+      line-height: px2rem(28px)
       white-space: nowrap
-      overflow: hidden
-      text-overflow: ellipsis
+      // overflow: hidden
+      // text-overflow: ellipsis
       background-color: rgba(7, 17, 27, 0.1)
+      font-size: px2rem(10px)
       .bulletin-title
         display: inline-block
-        width: 22px
-        height: 12px
+        width: px2rem(22px)
+        height: px2rem(28px)
         bg-image('bulletin')
-        background-size: 22px 12px
+        background-size: px2rem(22px) px2rem(12px)
         background-repeat: no-repeat
+        background-position: 0 px2rem(7px)
       .bulletin-text
-        margin: 0 4px
-        font-size: 10px
+        display: inline-block;
+        width :calc(100% - 32px)
+        margin: 0 px2rem(20px) 0 px2rem(4px)
         vertical-align: top
+        overflow: hidden
+        white-space: nowrap;
+        text-overflow: ellipsis;
       .icon-keyboard_arrow_right
         position: absolute
-        font-size: 10px
-        top: 8px
-        right: 12px
+        top: px2rem(8px)
+        right: px2rem(12px)
     .background
       position: absolute
       top: 0
@@ -202,41 +210,41 @@
         flex: 1
         .detail-main
           width: 80%
-          margin: 64px auto 32px
+          margin: px2rem(64px) auto px2rem(32px)
           .name
-            line-height: 16px
-            font-size: 16px
+            line-height: px2rem(16px)
+            font-size: px2rem(16px)
             font-weight: 700
             text-align: center
           .star-wrapper
-            margin-top: 16px
-            padding: 2px 0
+            margin-top: px2rem(16px)
+            padding: px2rem(2px) 0
             text-align: center
           .title
             display: flex
             align-items: center
-            margin: 28px auto 24px
+            margin: px2rem(28px) auto px2rem(24px)
             .line
               flex: 1
               border-bottom: 1px solid rgba(255, 255, 255, 0.2)
             .text
-              padding: 0 12px
-              font-size: 14px
+              padding: 0 px2rem(12px)
+              font-size: px2rem(14px)
               font-weight: 700
           .support
             .support-item
-              padding: 0 12px
-              margin-bottom: 12px
+              padding: 0 px2rem(12px)
+              margin-bottom: px2rem(12px)
               font-size: 0
           .bulletin
-            margin-top: 24px
-            padding: 0 12px
-            line-height: 24px
-            font-size: 12px
+            margin-top: px2rem(24px)
+            padding: 0 px2rem(12px)
+            line-height: px2rem(24px)
+            font-size: px2rem(12px)
             font-weight: 200
       .detail-close
-        width: 32px
-        height: 32px
-        margin: 0 auto 32px
-        font-size: 32px
+        width: px2rem(32px)
+        height: px2rem(32px)
+        margin: 0 auto px2rem(32px)
+        font-size: px2rem(32px)
 </style>

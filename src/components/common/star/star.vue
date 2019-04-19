@@ -53,11 +53,11 @@
     background-repeat:no-repeat
   &.star-48
     .star-item
-      star-img(20px,22px,'star48')
+      star-img(px2rem(20px),px2rem(22px),'star48')
   &.star-36
     .star-item
-      star-img(15px,6px,'star36')
+      star-img(px2rem(15px),px2rem(6px),'star36')
   &.star-24
     .star-item
-      star-img(10px,3px,'star24')
+      star-img(px2rem(10px),px2rem(3px),'star24')
 </style>

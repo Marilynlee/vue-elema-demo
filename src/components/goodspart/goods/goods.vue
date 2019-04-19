@@ -164,21 +164,21 @@
   .goods
     display: flex
     position: absolute
-    top: 174px
-    bottom: 46px
+    top: px2rem(174px)
+    bottom: px2rem(46px)
     width: 100%
     overflow: hidden
     .menu-wrapper
-      flex: 0 0 80px
-      width: 80px
+      flex: 0 0 px2rem(80px)
+      width: px2rem(80px)
       background-color: #f3f5f7
       .menu-item
         display: table
-        width: 54px
-        height: 56px
-        padding: 0 12px
-        font-size: 12px
-        line-height: 14px
+        width: px2rem(54px)
+        height: px2rem(56px)
+        padding: 0 px2rem(12px)
+        font-size: px2rem(12px)
+        line-height: px2rem(14px)
         color: rgb(7, 17, 27)
         &.current
           position: relative
@@ -197,33 +197,33 @@
     .foots-wrapper
       flex: 1
       .title
-        padding-left: 14px
-        height: 26px
-        line-height: 26px
-        border-left: 2px solid #d9dde1
+        padding-left: px2rem(14px)
+        height: px2rem(26px)
+        line-height: px2rem(26px)
+        border-left: px2rem(2px) solid #d9dde1
         color: rgb(147, 153, 159)
         background: #f3f5f7
-        font-size: 12px
+        font-size: px2rem(12px)
       .food-item
         display: flex
-        margin: 18px
-        padding-bottom: 18px
+        margin: px2rem(18px)
+        padding-bottom: px2rem(18px)
         border-1px(rgba(7, 17, 27, 0.1))
         &:last-child:after
           border-top: none
         &:last-child
           padding-bottom: 0
         .icon
-          flex: 0 0 57px
-          margin-right: 10px
+          flex: 0 0 px2rem(57px)
+          margin-right: px2rem(10px)
         .content
           flex: 1
           width: 0
           .name
-            margin: 2px 0 8px 0
-            height: 14px
-            line-height: 14px
-            font-size: 14px
+            margin: px2rem(2px) 0 px2rem(8px) 0
+            height: px2rem(14px)
+            line-height: px2rem(14px)
+            font-size: px2rem(14px)
             font-weight: 700
             color: rgb(7, 17, 27)
           .desc
@@ -231,26 +231,26 @@
             overflow: hidden
             text-overflow: ellipsis
           .desc, .extra
-            margin-bottom: 8px
-            line-height: 12px
-            font-size: 10px
+            margin-bottom: px2rem(8px)
+            line-height: px2rem(12px)
+            font-size: px2rem(10px)
             color: rgb(147, 153, 159)
           .extra
             .count
-              margin-right: 12px
+              margin-right: px2rem(12px)
           .price
             font-weight: 700
-            line-height: 24px
+            line-height: px2rem(24px)
             color: rgb(147, 153, 159)
-            font-size: 10px
+            font-size: px2rem(10px)
             .now
-              margin-right: 8px
-              font-size: 14px
+              margin-right: px2rem(8px)
+              font-size: px2rem(14px)
               color: rgb(240, 20, 20)
             .old
               text-decoration: line-through
           .cartcontrol-wrapper
             position: absolute
-            bottom: 12px
+            bottom: px2rem(12px)
             right: 0
 </style>
