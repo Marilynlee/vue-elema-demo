@@ -64,14 +64,11 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import { mapState } from 'vuex';
   import star from '@components/common/star/star.vue';
   import imgText from '@components/common/imgText/imgText.vue';
+  const ERR_OK = 0;
   export default {
-    props: {
-      seller: {
-        type: Object
-      }
-    },
     components: {
       star,
       imgText
@@ -88,6 +85,18 @@
     },
     created() {
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
+      this.$http.get('/api/seller').then((response) => {
+          response = response.body;
+          if (response.errno === ERR_OK) {
+            const sellerInfo = response.data;
+            return this.$store.dispatch('getSellerInfo', {sellerInfo});
+          }
+        });
+    },
+    computed: {
+      ...mapState({
+        seller: state => state.sellerInfo
+      })
     }
   };
 </script>

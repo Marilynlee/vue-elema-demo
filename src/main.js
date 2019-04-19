@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import resource from './resource';
+import store from './store';
 import './common/stylus/index.styl';
 import { formatDate } from './common/js/date';
 
@@ -20,6 +21,7 @@ new Vue({
   el: '#app',
   router,
   resource,
+  store,
   components: { App },
   template: '<App/>'
 });
