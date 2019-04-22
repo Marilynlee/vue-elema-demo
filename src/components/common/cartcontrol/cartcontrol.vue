@@ -18,12 +18,8 @@
         type: Object
       }
     },
-    created() {
-//      this.food.count = 0;
-    },
     methods: {
       addCart() {
-        console.log('add');
         if (!this.food.count) {
           Vue.set(this.food, 'count', 1);
         } else {

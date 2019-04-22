@@ -118,11 +118,9 @@
         this.$emit('cartAdd', event.target);
       },
       ratingType(type) {
-//        console.log(type);
         this.selectType = type;
       },
       onlyContType(type) {
-//        console.log(type);
         this.onlyContent = type;
       },
       needShow(item) {
