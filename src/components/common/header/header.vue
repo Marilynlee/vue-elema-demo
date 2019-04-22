@@ -89,9 +89,7 @@ export default {
     this.$store.dispatch("getSellerInfo");
   },
   computed: {
-    ...mapState({
-      seller: state => state.sellerInfo
-    })
+    ...mapState(["seller"])
   }
 };
 </script>

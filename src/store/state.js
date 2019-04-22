@@ -1,4 +1,5 @@
 export default {
-    sellerInfo: {},
-    goods: []
+    seller: {},
+    goods: [],
+    ratings: []
 };

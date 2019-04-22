@@ -10,20 +10,20 @@
             <div v-show="totalCount>0" class="num">{{totalCount}}</div>
           </div>
           <div class="price" :class="{'highlight':totalPrice>0}">￥{{totalPrice}}</div>
-          <div class="desc">另需配送费￥{{sellerInfo.deliveryPrice}}元</div>
+          <div class="desc">另需配送费￥{{seller.deliveryPrice}}元</div>
         </div>
         <div class="content-right" v-if="totalPrice === 0">
-          <div class="pay">￥{{sellerInfo.minPrice}}起送</div>
+          <div class="pay">￥{{seller.minPrice}}起送</div>
         </div>
         <div
           class="content-right"
-          v-else-if="totalPrice > 0 && totalPrice < sellerInfo.minPrice"
+          v-else-if="totalPrice > 0 && totalPrice < seller.minPrice"
         >
-          <div class="pay">还差￥{{sellerInfo.minPrice - totalPrice}}起送</div>
+          <div class="pay">还差￥{{seller.minPrice - totalPrice}}起送</div>
         </div>
         <div
           class="content-right"
-          v-else-if="totalPrice >= sellerInfo.minPrice"
+          v-else-if="totalPrice >= seller.minPrice"
           @click.stop.prevent="pay"
         >
           <div class="pay highlight">去结算</div>
@@ -103,7 +103,7 @@ export default {
   },
   computed: {
     ...mapGetters(["totalPrice", "totalCount", "selectFoods"]),
-    ...mapState(["sellerInfo"]),
+    ...mapState(["seller"]),
     listShow: {
       get: function() {
         return !this.fold;
