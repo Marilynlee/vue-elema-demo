@@ -22,7 +22,8 @@ npm run build --report
 
 - 使用vue-cli构建项目
 - 使用vue-router控制路由
-- 使用vue-resource发送请求
+- 使用vuex管理数据
+- 使用axios发送请求
 - 使用eslint校验代码风格
 - 使用stylus书写样式
 - 使用es6书写js
